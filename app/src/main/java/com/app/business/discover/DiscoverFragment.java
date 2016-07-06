@@ -3,6 +3,8 @@ package com.app.business.discover;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,11 +12,16 @@ import android.view.ViewGroup;
 import com.app.R;
 import com.app.base.BaseFragment;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class DiscoverFragment extends BaseFragment {
 
+
+    @BindView(R.id.recyclerview) RecyclerView recyclerview;
 
     public DiscoverFragment() {
         // Required empty public constructor
@@ -25,7 +32,12 @@ public class DiscoverFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_disvocer, container, false);
+        View view = inflater.inflate(R.layout.fragment_disvocer, container, false);
+        ButterKnife.bind(this, view);
+        recyclerview.setHasFixedSize(true);
+        recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
+        recyclerview.setAdapter(new DiscoverAdapter(mContext));
+        return view;
     }
 
 }
