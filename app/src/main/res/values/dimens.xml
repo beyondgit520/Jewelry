@@ -7,4 +7,8 @@
     <dimen name="normal_margin">16dp</dimen>
     <dimen name="normal_padding">16dp</dimen>
     <dimen name="small_padding">8dp</dimen>
+    <dimen name="drawable_padding">5dp</dimen>
+    <dimen name="drawable_padding_big">16dp</dimen>
+    <dimen name="border_width">1dp</dimen>
+    <dimen name="border_width_thin">0.5dp</dimen>
 </resources>

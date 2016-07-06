@@ -1,11 +1,8 @@
 package com.app.business.me;
 
 
-import android.content.Intent;
-import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -14,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.app.R;
 import com.app.base.BaseFragment;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,9 +21,8 @@ import butterknife.ButterKnife;
  */
 public class MeFragment extends BaseFragment {
 
-    @BindView(R.id.toolbar_layout) CollapsingToolbarLayout toolbarLayout;
-    @BindView(R.id.fab) FloatingActionButton fab;
     @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.header_view) SimpleDraweeView headerView;
 
     public MeFragment() {
         // Required empty public constructor
@@ -38,20 +35,13 @@ public class MeFragment extends BaseFragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_me, container, false);
         ButterKnife.bind(this, view);
-        toolbarLayout.setTitle("个人中心");
-        toolbarLayout.setCollapsedTitleTextColor(Color.BLACK);
-        toolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.colorAccent));
         return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(mContext, AboutActivity.class));
-            }
-        });
+        Uri uri = Uri.parse("http://img1.imgtn.bdimg.com/it/u=3943670450,2335577151&fm=23&gp=0.jpg");
+        headerView.setImageURI(uri);
     }
 }

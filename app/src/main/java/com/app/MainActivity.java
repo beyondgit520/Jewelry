@@ -3,11 +3,14 @@ package com.app;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.app.base.BaseActivity;
 import com.app.business.discover.DiscoverFragment;

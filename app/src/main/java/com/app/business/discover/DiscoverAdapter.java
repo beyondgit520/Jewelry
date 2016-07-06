@@ -35,6 +35,11 @@ public class DiscoverAdapter extends BaseRecyclerViewAdapter<DiscoverEntity, Dis
 
     @Override
     public void onBindViewHolder(DiscoverAdapter.DiscoverHolder holder, int position) {
+        holder.discoverIv.setImageResource(R.mipmap.bg);
+        holder.discoverTitle.setText("TITLE");
+        holder.discoverContent.setText("ddfdfdfdfdf");
+        holder.discoverPraise.setText("123");
+        holder.discoverComment.setText("23");
     }
 
     @Override
