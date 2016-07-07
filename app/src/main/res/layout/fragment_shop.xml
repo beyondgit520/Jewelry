@@ -1,13 +1,165 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context="com.app.business.shop.ShopFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="shop"/>
+        android:orientation="vertical">
 
+        <android.support.v4.view.ViewPager
+            android:id="@+id/ad_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorAccent"/>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/darker_gray"
+            android:orientation="horizontal"
+            app:divider="@drawable/line_vertical_black"
+            app:dividerPadding="5dp"
+            app:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/mini_padding">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今日金价"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/today_gold_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="235元/克"
+                    android:textColor="@color/colorAccent"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/k_yellow"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_expand_more_black_24dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/normal_padding"
+                android:paddingRight="@dimen/normal_padding"
+                android:text="K黄"
+                android:textColor="@color/white"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/gold_weight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_expand_more_black_24dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/normal_padding"
+                android:paddingRight="@dimen/normal_padding"
+                android:text="克重"
+                android:textColor="@color/white"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/lenth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_expand_more_black_24dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/normal_padding"
+                android:paddingRight="@dimen/normal_padding"
+                android:text="长度"
+                android:textColor="@color/white"/>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_width"
+            android:background="?android:listDivider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/categray_view"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical">
+
+                <com.lsjwzh.widget.recyclerviewpager.LoopRecyclerViewPager
+                    android:id="@+id/color_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+                <View
+                    android:id="@+id/color_indicator"
+                    android:layout_width="25dp"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorAccent"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/goods_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#b3000000">
+
+        <ImageView
+            android:id="@+id/share_iv"
+            android:layout_width="?actionBarSize"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/normal_padding"
+            android:src="@mipmap/emo_im_happy"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="@dimen/normal_padding"
+            android:text="定位"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
 </FrameLayout>
