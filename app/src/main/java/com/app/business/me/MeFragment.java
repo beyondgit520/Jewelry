@@ -41,7 +41,7 @@ public class MeFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Uri uri = Uri.parse("http://img1.imgtn.bdimg.com/it/u=3943670450,2335577151&fm=23&gp=0.jpg");
+        Uri uri = Uri.parse("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=416202619,4025660570&fm=21&gp=0.jpg");
         headerView.setImageURI(uri);
     }
 }

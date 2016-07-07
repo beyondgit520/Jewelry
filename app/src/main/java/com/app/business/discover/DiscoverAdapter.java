@@ -1,6 +1,7 @@
 package com.app.business.discover;
 
 import android.content.Context;
+import android.net.Uri;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import com.app.R;
 import com.app.base.BaseRecyclerViewAdapter;
 import com.app.business.discover.entity.DiscoverEntity;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,7 +37,8 @@ public class DiscoverAdapter extends BaseRecyclerViewAdapter<DiscoverEntity, Dis
 
     @Override
     public void onBindViewHolder(DiscoverAdapter.DiscoverHolder holder, int position) {
-        holder.discoverIv.setImageResource(R.mipmap.bg);
+//        holder.discoverIv.setImageResource(R.mipmap.bg);
+        holder.discoverIv.setImageURI(Uri.parse("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4162713336,233192149&fm=21&gp=0.jpg"));
         holder.discoverTitle.setText("TITLE");
         holder.discoverContent.setText("ddfdfdfdfdf");
         holder.discoverPraise.setText("123");
@@ -48,7 +51,7 @@ public class DiscoverAdapter extends BaseRecyclerViewAdapter<DiscoverEntity, Dis
     }
 
     public static class DiscoverHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.discover_iv) AppCompatImageView discoverIv;
+        @BindView(R.id.discover_iv) SimpleDraweeView discoverIv;
         @BindView(R.id.discover_title) AppCompatTextView discoverTitle;
         @BindView(R.id.discover_content) TextView discoverContent;
         @BindView(R.id.discover_praise) AppCompatTextView discoverPraise;

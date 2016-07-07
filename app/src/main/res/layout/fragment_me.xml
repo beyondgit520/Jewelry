@@ -42,9 +42,8 @@
                     android:layout_marginBottom="30dp"
                     fresco:placeholderImage="@mipmap/ic_launcher"
                     fresco:roundAsCircle="true"
-                    fresco:roundBottomLeft="false"
-                    fresco:roundBottomRight="false"
-                    fresco:roundWithOverlayColor="@android:color/transparent"
+                    fresco:roundBottomLeft="true"
+                    fresco:roundBottomRight="true"
                     fresco:roundingBorderColor="@color/white"
                     fresco:roundingBorderWidth="2dp"/>
             </FrameLayout>
