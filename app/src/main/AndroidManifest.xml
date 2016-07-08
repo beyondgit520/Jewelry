@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.app">
+<manifest package="com.app"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -28,6 +28,11 @@
         <activity
             android:name=".business.shop.GoodsDetailActivity"
             android:label="@string/title_activity_goods_detail"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".business.shop.ShoppingBag"
+            android:label="@string/title_activity_shopping_bag"
             android:theme="@style/AppTheme">
         </activity>
     </application>

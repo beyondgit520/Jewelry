@@ -2,7 +2,6 @@ package com.app.business.discover;
 
 import android.content.Context;
 import android.net.Uri;
-import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -30,7 +29,7 @@ public class DiscoverAdapter extends BaseRecyclerViewAdapter<DiscoverEntity, Dis
 
     @Override
     public DiscoverAdapter.DiscoverHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_discover, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_discover, parent, false);
         DiscoverHolder holder = new DiscoverHolder(view);
         return holder;
     }

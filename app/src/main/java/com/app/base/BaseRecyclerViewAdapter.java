@@ -10,10 +10,10 @@ import java.util.List;
  */
 public abstract class BaseRecyclerViewAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
     protected List<T> datas;
-    protected Context context;
+    protected Context mContext;
 
     public BaseRecyclerViewAdapter(Context context) {
-        this.context = context;
+        this.mContext = context;
     }
 
     public void setData(List<T> datas) {

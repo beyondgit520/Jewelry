@@ -1,5 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:fresco="http://schemas.android.com/apk/res-auto"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
@@ -114,7 +115,10 @@
                 <com.lsjwzh.widget.recyclerviewpager.LoopRecyclerViewPager
                     android:id="@+id/color_recyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"/>
+                    android:layout_height="150dp"
+                    android:clipToPadding="false"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="60dp"/>
 
                 <View
                     android:id="@+id/color_indicator"
@@ -126,9 +130,9 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/goods_recyclerView"
                     android:layout_width="match_parent"
-                    android:paddingBottom="?actionBarSize"
+                    android:layout_height="match_parent"
                     android:clipToPadding="false"
-                    android:layout_height="match_parent"/>
+                    android:paddingBottom="?actionBarSize"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -167,4 +171,35 @@
             android:text="定位"
             android:textColor="@color/white"/>
     </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="40dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            fresco:placeholderImage="@drawable/header"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundingBorderColor="@color/white"
+            fresco:roundingBorderWidth="2dp"/>
+
+        <TextView
+            android:id="@+id/bag_count"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_gravity="right"
+            android:background="@drawable/red_point"
+            android:gravity="center"
+            android:minWidth="14dp"
+            android:text="23"
+            android:textColor="@color/white"
+            android:textSize="10sp"/>
+    </FrameLayout>
 </FrameLayout>
