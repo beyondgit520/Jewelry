@@ -6,7 +6,9 @@
              tools:context="com.app.business.shop.ShopFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <LinearLayout
+        android:id="@+id/root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -124,6 +126,8 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/goods_recyclerView"
                     android:layout_width="match_parent"
+                    android:paddingBottom="?actionBarSize"
+                    android:clipToPadding="false"
                     android:layout_height="match_parent"/>
             </LinearLayout>
 
@@ -131,6 +135,7 @@
     </LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="#b3000000">

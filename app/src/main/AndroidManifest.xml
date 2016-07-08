@@ -3,6 +3,7 @@
           package="com.app">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".base.APP"
         android:allowBackup="true"
@@ -22,6 +23,11 @@
         <activity
             android:name=".business.me.AboutActivity"
             android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".business.shop.GoodsDetailActivity"
+            android:label="@string/title_activity_goods_detail"
             android:theme="@style/AppTheme">
         </activity>
     </application>

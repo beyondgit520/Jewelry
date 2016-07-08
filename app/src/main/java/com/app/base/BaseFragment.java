@@ -9,9 +9,11 @@ import android.os.Bundle;
  */
 public class BaseFragment extends Fragment{
     protected Context mContext;
+    protected String tag;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
+        tag = this.getClass().getSimpleName();
     }
 }

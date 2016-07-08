@@ -6,4 +6,6 @@
     <color name="textColorPrimary">@android:color/black</color>
     <color name="white">@android:color/white</color>
     <color name="black">@android:color/black</color>
+    <color name="orange">@android:color/holo_orange_dark</color>
+    <color name="black_transparent_toolbar_bg">#b3000000</color>
 </resources>
