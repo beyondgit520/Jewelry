@@ -1,5 +1,6 @@
 package com.app.base;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ public class BaseActivity extends AppCompatActivity {
     protected Context mContext;
     protected String tag;
     public static DisplayMetrics displayMetrics;
+    protected ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class BaseActivity extends AppCompatActivity {
         tag = this.getClass().getSimpleName();
         displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        progressDialog = new ProgressDialog(mContext);
     }
 
     @Override

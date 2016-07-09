@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:splitMotionEvents">false</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -17,5 +18,16 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+<!--    <style name="SimpleDraweeView" parent="">
+        <item name="app:fadeDuration">300</item>
+        <item name="app:actualImageScaleType">focusCrop</item>
+        <item name="app:placeholderImage">@drawable/default_image</item>
+        <item name="app:placeholderImageScaleType">centerCrop</item>
+        <item name="app:failureImage">@drawable/default_image</item>
+        <item name="app:failureImageScaleType">centerCrop</item>
+        <item name="app:retryImage">@drawable/default_image</item>
+        <item name="app:retryImageScaleType">centerCrop</item>
+    </style>-->
 
 </resources>
