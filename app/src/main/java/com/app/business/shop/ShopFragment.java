@@ -109,7 +109,7 @@ public class ShopFragment extends BaseFragment {
                 //registering popup with OnMenuItemClickListener
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(mContext,item.getItemId()+"",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, item.getItemId() + "", Toast.LENGTH_SHORT).show();
                         return true;
                     }
                 });
@@ -215,7 +215,16 @@ public class ShopFragment extends BaseFragment {
         colorRecyclerView.setHasFixedSize(true);
         colorRecyclerView.addOnPageChangedListener(new RecyclerViewPager.OnPageChangedListener() {
             @Override public void OnPageChanged(int i, int i1) {
-                Toast.makeText(mContext, "i:" + i + "   i1:" + i1, Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "i:" + i % 3 + "   i1:" + i1 % 3, Toast.LENGTH_SHORT).show();
+                switch (i1 % 3) {
+                    case 0:
+                        colorIndicator.setBackgroundColor(mContext.getResources().getColor(R.color.orange));
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                }
             }
         });
         colorRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
